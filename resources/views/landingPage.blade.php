@@ -50,7 +50,7 @@
             <p>fixIT! Merupakan sistem pelaporan sarana prasarana yang dirancang untuk mempermudah dosen maupun mahasiswa
                 untuk melaporkan kerusakan sarana dan prasarana didalam lingkup kampus Politeknik Negeri Malang.
                 fixIT! Merupakan sistem yang memungkinkan mahasiswa maupun dosen bisa memantau perkembangan maupun
-                ketersediaan sarana dan prasarana didalam kampus Politeknik Negeri Malang.</p>
+                ketersediaan sarana dan prasarana di dalam kampus Politeknik Negeri Malang.</p>
         </div>
     </div>
 
