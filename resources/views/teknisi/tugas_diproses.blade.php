@@ -3,7 +3,7 @@
 @section('header', $page->header)
 
 @section('content')
-    <div class="font-inter">
+    <div class="font-inter fade-in">
         <div class="flex justify-between items-center my-5">
             <h1 class="font-bold text-xl">Daftar Laporan</h1>
             <div class="flex items-center gap-4">
@@ -40,7 +40,6 @@
         </div>
     </div>
 
-
 @endsection
 
 @push('js')
@@ -62,8 +61,6 @@
                 });
         }
 
-
-
         function closeModal() {
             document.getElementById('modalContainer').classList.remove('flex');
             document.getElementById('modalContainer').classList.add('hidden');
@@ -72,6 +69,9 @@
 
         var dataLaporan;
         $(document).ready(function() {
+            // Add fade-in class to the content
+            $('.fade-in').addClass('visible');
+
             dataLaporan = $('#tableLaporan').DataTable({
                 serverSide: true,
                 ajax: {
@@ -118,7 +118,6 @@
                         searchable: false
                     }
                 ]
-
             });
 
             $('#filter_status').change(function() {
@@ -126,4 +125,14 @@
             });
         });
     </script>
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
 @endpush
