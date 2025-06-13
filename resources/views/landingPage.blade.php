@@ -3,13 +3,12 @@
 @section('title', 'Landing Page | fixIT!')
 
 @section('content')
-    <div name="card1" class="bg-silver w-full">
+    <div name="card1" class="bg-silver w-full fade-container">
         <div class="flex items-center justify-between px-20 py-40 w-full max-w-[1400px] mx-auto autoShow1">
             <div class="space-y-2 tracking-wide">
                 <h1 class="text-6xl font-bold text-D_grey">Lapor Mudah,</h1>
                 <h1 class="text-6xl font-bold text-greenPrimary">Fasilitas Terjaga!</h1>
                 <h5 class="text-lg mt-5">Mari bersama wujudkan kampus yang lebih baik dengan fixIT!</h5>
-               
             </div>
             <div class="w-full md:w-1/2 flex justify-end">
                 <img src="{{ asset('assets/landingpage1.png')}}" alt="" class="h-auto w-4/5">
@@ -92,4 +91,19 @@
             </a>
         </div>
     </div>
+
+    <style>
+        .fade-container {
+            transition: opacity 0.5s ease;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('beforeunload', function () {
+            document.querySelector('.fade-container').classList.add('fade-out');
+        });
+    </script>
 @endsection
